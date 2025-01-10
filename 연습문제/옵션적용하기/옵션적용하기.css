@@ -1,0 +1,17 @@
+#table {
+    margin: 100px auto;
+}
+
+.text {
+    font-weight: 900;
+    text-align: center;
+}
+
+#box {
+    display: flex;
+    flex-direction:column;
+    border: 3px solid black;
+    width: 600px;
+    height: 200px;
+    margin: auto;
+}

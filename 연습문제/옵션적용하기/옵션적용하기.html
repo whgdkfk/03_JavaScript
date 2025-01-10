@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옵션적용하기</title>
+    <link rel="stylesheet" href="옵션적용하기.css">
+</head>
+<body>
+    <table id="table" width="600" border="0">
+        <tr>
+            <td class="text">너비: </td>
+            <td><input type="text" id="boxWidth"> px</td>
+            <td class="text">높이: </td>
+            <td><input type="text" id="boxHeight"> px</td>
+        </tr>
+        <tr>
+            <td class="text">글자크기: </td>
+            <td><input type="text" id="fs"> px</td>
+            <td class="text">굵기: </td>
+            <td>보통 <input type="radio" name="fw"> 
+                굵게 <input type="radio" name="fw">
+            </td>
+        </tr>
+        <tr>
+            <td class="text">글자색: </td>
+            <td><input type="text" id="inputColor"></td>
+            <td class="text">배경색: </td>
+            <td><input type="text" id="bgcolor"></td>
+        </tr>
+        <tr>
+            <td class="text">가로정렬: </td>
+            <td colspan="3">왼쪽 <input type="radio"> 가운데 <input type="radio"> 오른쪽 <input type="radio"></td>
+        </tr>
+        <tr>
+            <td class="text">세로정렬: </td>
+            <td colspan="3">위 <input type="radio"> 가운데 <input type="radio"> 아래 <input type="radio"></td>
+        </tr>
+        <tr>
+            <td class="text">출력 문자열: </td>
+            <td colspan="3"><input type="text" id="inputContent"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="4"><button id="applyBtn">적용하기</button></td>
+        </tr>
+    </table>
+
+    <div id="box">테스트</div>
+
+    <script src="옵션적용하기.js"></script>
+</body>
+</html>

@@ -7,45 +7,57 @@
     <link rel="stylesheet" href="옵션적용하기.css">
 </head>
 <body>
-    <table id="table" width="600" border="0">
-        <tr>
-            <td class="text">너비: </td>
-            <td><input type="text" id="boxWidth"> px</td>
-            <td class="text">높이: </td>
-            <td><input type="text" id="boxHeight"> px</td>
-        </tr>
-        <tr>
-            <td class="text">글자크기: </td>
-            <td><input type="text" id="fs"> px</td>
-            <td class="text">굵기: </td>
-            <td>보통 <input type="radio" name="fw"> 
-                굵게 <input type="radio" name="fw">
-            </td>
-        </tr>
-        <tr>
-            <td class="text">글자색: </td>
-            <td><input type="text" id="inputColor"></td>
-            <td class="text">배경색: </td>
-            <td><input type="text" id="bgcolor"></td>
-        </tr>
-        <tr>
-            <td class="text">가로정렬: </td>
-            <td colspan="3">왼쪽 <input type="radio"> 가운데 <input type="radio"> 오른쪽 <input type="radio"></td>
-        </tr>
-        <tr>
-            <td class="text">세로정렬: </td>
-            <td colspan="3">위 <input type="radio"> 가운데 <input type="radio"> 아래 <input type="radio"></td>
-        </tr>
-        <tr>
-            <td class="text">출력 문자열: </td>
-            <td colspan="3"><input type="text" id="inputContent"></td>
-        </tr>
-        <tr align="center">
-            <td colspan="4"><button id="applyBtn">적용하기</button></td>
-        </tr>
-    </table>
+    <div class="container">
+        <table class="controller">
+            <tr>
+                <th>너비: </th>
+                <td><input type="number" min="1" max="1000" id="boxWidth"> px</td>
+                <th class="text">높이: </th>
+                <td><input type="number" min="1" max="1000" id="boxHeight"> px</td>
+            </tr>
+            <tr>
+                <th>글자크기: </th>
+                <td><input type="number" min="1" max="1000" id="fs"> px</td>
+                <th>굵기: </th>
+                <td>
+                    <label>보통 <input type="radio" name="fw" value="normal"></label>
+                    <label>굵게 <input type="radio" name="fw" value="bold"></label>
+                </td>
+            </tr>
+            <tr>
+                <th>글자색: </th>
+                <td><input type="text" id="boxFontColor"></td>
+                <th>배경색: </th>
+                <td><input type="text" id="boxBgColor"></td>
+            </tr>
+            <tr>
+                <th>가로정렬: </th>
+                <td colspan="3">
+                    <label>왼쪽 <input type="radio" name="align-row" value="flex-start"></label> 
+                    <label>가운데 <input type="radio" name="align-row" value="center"></label> 
+                    <label>오른쪽 <input type="radio" name="align-row" value="flex-end"></label>
+                </td>
+            </tr>
+            <tr>
+                <th>세로정렬: </th>
+                <td colspan="3">
+                    <label>위 <input type="radio" name="align-col" value="flex-start"></label> 
+                    <label>가운데 <input type="radio" name="align-col" value="center"></label> 
+                    <label>아래 <input type="radio" name="align-col" value="flex-end"></label>
+                </td>
+            </tr>
+            <tr>
+                <th>출력 문자열: </th>
+                <td colspan="3">
+                    <input type="text" id="content">
+                </td>
+            </tr>
+        </table>
 
-    <div id="box">테스트</div>
+        <button id="applyBtn">적용하기</button>
+
+        <div id="box"></div>
+    </div>
 
     <script src="옵션적용하기.js"></script>
 </body>

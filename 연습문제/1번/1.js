@@ -15,10 +15,10 @@ btn.addEventListener("click", () => {
     for(let i = 0 ; i < val ; i++){
         /* input 요소를 만들어서 #container의 자식으로 추가  */
         const input = document.createElement("input");
+        // <input type="number" class="input-number">
         input.type = "number";
         input.className = "input-number";
-        // <input type="number" class="input-number">
-        container.append(input)
+        container.append(input);
     }
 
 });

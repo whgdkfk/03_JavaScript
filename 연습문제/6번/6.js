@@ -83,7 +83,7 @@ updateBtn.addEventListener("click", () => {
         menuContent.menuNameInput.value = (menuName === "미입력") ? "" : menuName;
 
         // 문자열로 비교해야 함("0")
-        menuContent.menuPriceInput.value = (menuName === "0") ? "" : menuPrice;
+        menuContent.menuPriceInput.value = (menuPrice === "0") ? "" : menuPrice;
 
         // .menu(li) 내부 내용 모두 삭제
         item.innerHTML = ""; // innerText, innerHTML 상관 없음
@@ -91,7 +91,7 @@ updateBtn.addEventListener("click", () => {
         // menuContent 객체에 저장된 input 요소를
         // 모두 .menu(li)의 자식으로 추가
         for(let key in menuContent) {
-            item.append(menuContainer[key]);
+            item.append(menuContent[key]);
         }
     });
 });
